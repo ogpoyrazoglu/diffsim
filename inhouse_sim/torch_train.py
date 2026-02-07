@@ -466,11 +466,11 @@ def execute_training():
 	global start_time, agent
 	print(f"{torch.cuda.is_available()}")
 	global agent
-	agent = F1TenthModel(data_dir="bag/bags_2023_02_28/leftright/", 
-		validation_dir="bag/bags_2023_02_27/wiggle2/validation/")
+	agent = F1TenthModel(data_dir="bag/bags_2023_02_28/leftright/",
+		validation_dir="bag/bags_2023_02_26/left2right2-train/")
 	train_start_time = time.time()
 	start_time = datetime.now().strftime("%Y-%m-%d%H-%M-%S")
-	agent.train(100,plot_pdf=True,batch_size=4)
+	agent.train(100,plot_pdf=False,batch_size=4)  # Plotting disabled due to matplotlib/numpy compatibility issue
 	print(f"Training took {time.time()-train_start_time} seconds")
 
 if __name__ == '__main__':

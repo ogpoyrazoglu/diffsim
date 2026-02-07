@@ -166,3 +166,5 @@ cython_debug/
 *.cpython-37.pyc
 *.ini
 *.cpython-38.pyc
+inhouse_sim/bag/*
+CLAUDE.md
